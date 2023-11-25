@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Huiswerkopdracht Javascript en jQuery</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#knop").click(function () {
+                var naam = $("#idTekstveld_naam").val();
+                var gerecht1 = $("#idgerecht_vrijdagavond").val();
+                var gerecht2 = $("#idgerecht_zaterdagavond").val();
+                var lunch1 = $("#idLunch_zaterdag").val();
+                var lunch2 = $("#idLunch_zondag").val();
+                window.alert("Bedankt voor het doorgeven, " + naam + "! We geven door dat je vrijdagavond graag een " + gerecht1 + "gerecht wilt en dat je zaterdagavond kiest voor een " + gerecht2 + "gerecht bij het diner. Voor het 12-uurtje op zaterdag kies je voor de " + lunch1 + " en zondag eet je " + lunch2 + " mee.");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Weekendje weg Apotheek de Klipper</h1>
+    <p>Geef hieronder aan wat je per dag wilt eten en of je zondag wel of niet mee eet.</p>
+    <form>
+        <table width="900" border="0">
+            <tbody>
+                <tr>
+                    <td width="200"><b>Wat is je naam?</b></td>
+                    <td width="400"><input type="text" name="naam" id="idTekstveld_naam"
+                            placeholder="vul hier je naam in"></td>
+                </tr>
+                <td><br></td>
+                <tr>
+                    <td><b>Diner vrijdagavond: vis, vlees of vega?</b></td>
+                    <td>
+                        <input type="radio" name="gerechtvrijdagavond" id="idgerecht_vrijdagavond" value="vis"
+                            checked>vis
+                        <input type="radio" name="gerechtvrijdagavond" id="idgerecht_vrijdagavond" value="vlees">vlees
+                        <input type="radio" name="gerechtvrijdagavond" id="idgerecht_vrijdagavond" value="vega">vega
+                    </td>
+                </tr>
+                <td><br></td>
+                <tr>
+                    <td><b>Diner zaterdagavond: vis, vlees of vega? </b></td>
+                    <td>
+                        <input type="radio" name="gerechtzaterdagavond" id="idgerecht_zaterdagavond" value="vis"
+                            checked>vis
+                        <input type="radio" name="gerechtzaterdagavond" id="idgerecht_zaterdagavond" value="vlees">vlees
+                        <input type="radio" name="gerechtzaterdagavond" id="idgerecht_zaterdagavond" value="vega">vega
+                    </td>
+                </tr>
+                <td><br></td>
+                <tr>
+                    <td><b>Lunch zaterdagmiddag "12-uurtje" met soep, brood met parmaham en een garnalen- of
+                            rundvleeskroket?</b></td>
+                    <td>
+                        <input type="radio" name="lunchzaterdag" id="idLunch_zaterdag" value="garnalenkroket"
+                            checked>garnalenkroket
+                        <input type="radio" name="lunchzaterdag" id="idLunch_zaterdag"
+                            value="rundvleeskroket">rundvleeskroket
+                    </td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                <tr>
+                    <td width="200"><b>Eet je zondagmiddag met de lunch om 14:00 uur wel of niet mee?</b></td>
+                    <td width="400"><input type="text" name="lunchzondag" id="idLunch_zondag" placeholder="wel/niet">
+                    </td>
+                </tr>
+                <td></td>
+                <tr>
+                    <td><br></td>
+                    <td>
+                        <input id="knop" name="knop" type="button" value="Verzend">
+                    </td>
+                </tr>
+            </tbody>
+    </form>
+
+</body>
+
+</html>
